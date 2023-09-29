@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saylani Welfare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1a3da58247.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&family=Noto+Sans+JP:wght@200&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/saylani.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather+Sans:wght@600&family=Noto+Sans+JP:wght@200&family=Poppins:wght@100;300;400&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .bg-body-tertiary {
+        --bs-bg-opacity: 0
+    }
+
+    .navbar {
+        --bs-navbar-padding-y: 0.5rem;
+
+        --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+        --bs-navbar-nav-link-padding-x: 0.5rem;
+        --bs-navbar-brand-margin-end: -3rem
+    }
+
+    .navbar-collapse {
+        padding-left: 5vw;
+        padding-right: 0vw;
+        font-weight: 600;
+    }
+
+    .container-fluid {
+        --bs-gutter-x: 5rem;
+        flex-wrap: inherit;
+        border-bottom: 2px solid rgb(200, 198, 198);
+        position: sticky;
+
+    }
+
+    a.navlink {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttons1 {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .blue {
+        background-color: rgb(13, 109, 183);
+        color: white;
+    }
+
+    .green {
+        background-color: rgb(141, 198, 63);
+        color: white;
+    }
+
+    .btn {
+        --bs-btn-padding-x: 4rem;
+        --bs-btn-line-height: 17.5px
+    }
+
+    .top {
+        display: flex;
+        padding-left: 1vw;
+        gap: 2vw;
+        background-color: rgb(238, 238, 238);
+        color: rgb(103, 99, 99);
+
+    }
+
+    .background {
+        opacity: 0.4;
+        background-image: url("./images/bubbles-circles-background.jpg");
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    span {
+        color: rgb(141, 198, 63);
+    }
+
+    .animation {
+        color: rgb(45, 79, 216);
+    }
+
+    .text-saylani {
+
+        padding-left: 3em;
+        width: 50%;
+    }
+
+
+    .front-image {
+        padding-right: 3em;
+        padding-top: 1em;
+    }
+
+    .explore {
+        background-color: transparent;
+        border: 2px solid black;
+        color: black;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(240, 252, 219);
+        width: 90%;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3em;
+        margin-left: 3em;
+        border-radius: 1rem;
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 2rem;
+        background-color: rgb(240, 252, 219);
+        ;
+    }
+
+    .btn-outline-primary {
+        background-color: white;
+        color: black;
+        font-weight: 500;
+
+    }
+
+    .btn-outline-primary:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .input-group-text {
+        color: white;
+    }
+
+    .input {
+        padding-left: 2em;
+        margin: 0 auto;
+    }
+
+    .donate {
+        padding-right: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .btn {
+        --bs-btn-padding-x: 1rem;
+    }
+
+    .tea {
+        width: 50%
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-right: 3em;
+        margin-left: 1.6em;
+
+    }
+
+    .carousel-image {
+        border-radius: 2rem;
+    }
+
+    .say-cards {
+        display: flex;
+        flex-direction: row;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .heading1 {
+        text-align: center;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        margin-top: 2rem;
+        width: auto;
+    }
+
+    .first-card,
+    .second-card,
+    .third-card,
+    .fourth-card,
+    .fifth-card,
+    .sixth-card {
+        background-color: rgb(240, 252, 219);
+        padding: 2em;
+        border-radius: 1.5em;
+        text-align: center;
+
+    }
+
+    .card-image {
+        margin: 0 auto;
+        display: block;
+
+
+    }
+
+    .box {
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    .donate-cards {
+        margin-top: 3em;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 3em;
+        margin-right: 3em;
+
+    }
+
+    .projects {
+        display: flex;
+        width: auto;
+        height: 80vh;
+        margin: 3em 3em;
+        gap: 3em;
+    }
+
+    .hepatitis {
+        display: flex;
+        gap: 2em;
+        width: 100%;
+    }
+
+    .other-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .other-projects h2 {
+        margin-bottom: 1em;
+    }
+
+    .other-projects h5 {
+        color: rgb(13, 108, 182);
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .text-pro span {
+        color: black;
+        font-size: 14px;
+    }
+
+    .services {
+        background-image: url("./images/background.png");
+        background-repeat: no-repeat;
+        background-color: rgb(13, 108, 182);
+        width: auto;
+        height: 80vh;
+        margin-top: 3em;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .circle-icon {
+        background-color: white;
+        border-radius: 60px;
+        width: 120px;
+        height: 120px;
+        justify-content: center;
+    }
+
+    .circle-icon img {
+        position: relative;
+        top: 1.75em;
+        left: 1.8em;
+    }
+
+    .compartment {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7em;
+        align-items: center;
+    }
+
+    .compartment span {
+        color: white;
+        line-height: 0.5em;
+        text-align: center;
+    }
+
+    .testimonials {
+        margin: 3em 0;
+        color: black;
+        text-align: center;
+    }
+
+    .row-cols-md-3>* {
+        width: 20.333333%;
+        
+    }
+    .row{
+        justify-content: space-evenly;
+    }
+    .second{
+        margin-top: 2em;
+    }
+    
+
+
+
+
+
+
+    @media (max-width:1026) {
+        .heading {
+            width: 100%;
+            margin: 0 2rem;
+        }
+
+        .say-cards {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .projects {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <div class="top">
+        <div class="info">
+            <a><i class="fa-regular fa-envelope"></i>&nbsp;info@SaylaniWelfare.com</a>
+        </div>
+        <div class="number">
+            <a><i class="fa-solid fa-phone-volume" style="color: #c8cfda;"></i>&nbsp;&nbsp;021-111-729-526</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/saylani.png" width="219">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">health</a></li>
+                            <li><a class="dropdown-item" href="#">education </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">food</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bank details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Overseas doners</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="buttons1">
+                        <button class="btn btn-outline-success blue" type="submit">Donate Now</button>
+                        <button class="btn btn-outline-success green" type="submit">Be a Sponsor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="background"> </div>
+    <div class="main">
+        <div class="text-saylani">
+            <h1>Welcome to the <br><span>Saylani</span> welfare</h1>
+            <h3>The largest NGO offering free<span class="animation"> monthly family support</span></h3>
+            <p>Saylani Welfare is on the ground and already working with local communities to assess how best to support
+                underprivileged families in more than 63 areas of day to day lives.</p>
+            <button type="button" class="btn btn-primary btn-lg explore">Explore More&nbsp;<i
+                    class="fa-solid fa-arrow-right" style="color: #667999;"></i></button>
+        </div>
+        <div class="front-image">
+            <img src="./images/front.png" width="500px" alt="">
+        </div>
+    </div>
+    <div class="center">
+        <div class="input">
+            <div class="input-group mb-3">
+                <span class="input-group-text" style="background-color: black;">General</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="0">
+                <span class="input-group-text" style="background-color: black;">Rs</span>
+            </div>
+        </div>
+        <div class="donate">
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">Blood Bank / Thalassemia Treatment</button>
+                <button type="button" class="btn btn-outline-primary">Family Kifalat</button>
+                <button type="button" class="btn btn-outline-primary">Medical</button>
+                <button type="button" class="btn btn-outline-primary">Food</button>
+
+            </div>
+            <button class="btn btn-outline-success green tea" type="submit">Quick Donate</button>
+        </div>
+
+    </div>
+    <div class="image">
+        <img src="./images/95f11c54-b518-4d7f-8d24-b280acc914ef.jpg" alt="Medical" class="carousel-image" width="95%">
+    </div>
+    <div class="heading">
+        <h1 class="heading1">What We Are Doing</h1>
+        <div class="say-cards">
+            <div class="first-card">
+                <img src="./images/44.png" class="card-image">
+                <h4>Welfare</h4>
+            </div>
+            <div class="second-card">
+                <img src="./images/41.png" class="card-image">
+                <h4>Medical</h4>
+            </div>
+            <div class="third-card">
+                <img src="./images/39.png" class="card-image">
+                <h4>Online Sadqah</h4>
+            </div>
+
+            <div class="fourth-card">
+                <img src="./images/40.png" class="card-image">
+                <h4>Ro Plant</h4>
+            </div>
+            <div class="fifth-card">
+                <img src="./images/48.png" class="card-image">
+                <h4>Education</h4>
+            </div>
+            <div class="sixth-card">
+                <img src="./images/43.png" class="card-image">
+                <h4>Food</h4>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="donate-cards">
+        <div class="card" style="width: 25rem;">
+            <img src="./images/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg" class="card-img-top" alt="...">
+            <a href="#" class="btn btn-primary">Donate</a>
+        </div>
+        <div class="card" style="width: 25rem;">
+            <img src="./images/sam.jpg" class="card-img-top" alt="...">
+            <a href="#" class="btn btn-primary">Donate</a>
+        </div>
+        <div class="card" style="width: 25rem;">
+            <img src="./images/sam3.jpg" class="card-img-top" alt="...">
+            <a href="#" class="btn btn-primary">Donate</a>
+        </div>
+
+    </div>
+    <div class="projects">
+        <picture class="langar"><img src="./images/langar.jpg" width="600"></picture>
+        <div class="other-projects">
+            <h2> Other Projects</h2>
+            <div class="hepatitis">
+                <img class="icon-projects" src="./images/hepa.png" width="30" height="30">
+                <div class="text-pro">
+                    <h5>Hepatitis</h5>
+                    <span>Saylani Welfare has also set up a clinic for the best treatment of hepatitis patients where
+                        hepatitis patients are being treated.</span>
+                </div>
+            </div>
+            <div class="hepatitis">
+                <img class="icon-projects" src="./images/house.png" width="60" height="30">
+                <div class="text-pro">
+                    <h5>Housing Society</h5>
+                    <span>Saylani Welfare is also providing its own home facility for the homeless people. So far,
+                        thousands of houses and flats have been constructed and given in easy installments.</span>
+                </div>
+            </div>
+            <div class="hepatitis">
+                <img class="icon-projects" src="./images/book.png" width="80" height="35">
+                <div class="text-pro">
+                    <h5>IT Literacy</h5>
+                    <span>We are committed to developing more than 1 million software developers, which will add about
+                        100 billion annually to Pakistan's economy and help ease the debt burden on Pakistan.</span>
+                </div>
+            </div>
+            <div class="hepatitis">
+                <img class="icon-projects" src="./images/tharparkar.png" width="32" height="35">
+                <div class="text-pro">
+                    <h5>Tharparkar</h5>
+                    <span>In Tharparkar, Saylani has set up several schools and ro plants, dug wells and brought the
+                        children there to Karachi and taught them modern technology.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="compartment">
+            <div class="circle-icon"><img src="./images/plates.png" width="60" height="60"></div>
+            <h3>300000</h3>
+            <span>
+                <p>Food</p>
+                <p>(Daily)</p>
+            </span>
+        </div>
+        <div class="compartment">
+            <div class="circle-icon"><img src="./images/adoption.png" width="60" height="60"></div>
+            <h3>20000</h3>
+            <span>
+                <p>Family Adoption</p>
+                <p>(Monthly)</p>
+            </span>
+        </div>
+        <div class="compartment">
+            <div class="circle-icon"><img src="./images/cap.png" width="60" height="60"></div>
+            <h3>25000</h3>
+            <span>
+                <p>Education</p>
+                <p>(Monthly)</p>
+            </span>
+        </div>
+        <div class="compartment">
+            <div class="circle-icon"><img src="./images/doctor.png" width="60" height="60"></div>
+            <h3>125000</h3>
+            <span>
+                <p>Medical</p>
+                <p>(Monthly)</p>
+            </span>
+        </div>
+    </div>
+    <div class="testimonials">
+        <h2>Media Updates</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Big Announcement | SMIT is launching 12 courses on the 12th of Rabi' al-Awwal
+                        | #Saylani #SMIT #2023</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Malik Riaz's Big Announcement Free Laptop | Maulana Bashir Farooq Qadri Message | #Saylani #2023</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Saylani Rabi-Ul-Awal Special PSM 2023 | #Saylani #2023 #RabiUlAwa</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Maulana Bashir Farooq Qadri Message | Saylani RO Water Plants | #Saylani #2023 #ROPlants</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/5.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mr. Jason MacKenzie visited Saylani Welfare | Jason MacKenzie Lauds Saylani's Work | #Saylani #2023</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Saylani Techno Kids Courses | Students Feedback from Techno Kids Batch 04 | #Saylani #Techno #SMIT</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/7.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Maulana Bashir Farooq Qadri Message | اب وقت آگیا ہے کفایت شعاری کو اپنانے کا! | #Saylani #Inflation</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./images/8.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Saylani Free Mega Health Camp | Karachi #Saylani #Medicalcamp #2023</h5>
+                    <p class="card-text">#Organisation #Charity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
